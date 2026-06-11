@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0b2a5b" />
+<title>MasterClass Memorizando Preventiva para Residência</title>
+<meta name="description" content="Aprenda a gravar os temas que mais caem de Preventiva na Residência Médica em apenas 15 minutos com a técnica do Palácio da Memória. Funciona mesmo se você se considera ruim de memória." />
+
+<!-- Open Graph / social preview -->
+<meta property="og:title" content="MasterClass Memorizando Preventiva para Residência" />
+<meta property="og:description" content="Grave os temas que mais caem de Preventiva em 15 minutos com a técnica do Palácio da Memória." />
+<meta property="og:type" content="website" />
+
+<style>
+  :root{
+    --azul:#0b2a5b;
+    --azul-claro:#1652b8;
+    --azul-vivo:#2563eb;
+    --dourado:#f5b301;
+    --dourado-escuro:#d99a00;
+    --verde:#16a34a;
+    --verde-escuro:#15803d;
+    --tinta:#10182a;
+    --cinza:#5b6478;
+    --cinza-claro:#eef1f6;
+    --branco:#ffffff;
+    --borda:#e3e8f0;
+    --sombra:0 10px 35px rgba(11,42,91,.10);
+    --sombra-forte:0 18px 50px rgba(11,42,91,.22);
+    --raio:18px;
+    --max:1080px;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif;
+    color:var(--tinta);
+    background:var(--branco);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 22px}
+  section{padding:68px 0}
+  h1,h2,h3{line-height:1.18;letter-spacing:-.01em}
+  p{color:var(--cinza)}
+  strong{color:var(--tinta)}
+  img{max-width:100%;display:block}
+
+  /* ====== SLOTS DE IMAGEM (placeholders para PNG) ====== */
+  .img-slot{
+    position:relative;overflow:hidden;display:grid;place-items:center;
+    background:
+      repeating-linear-gradient(45deg,rgba(127,143,170,.06) 0 12px,rgba(127,143,170,.12) 12px 24px);
+    border:2px dashed #b9c4d6;border-radius:14px;color:#7f8faa;text-align:center;
+  }
+  .img-slot img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;
+  }
+  .img-slot .ph{padding:14px;font-size:.82rem;font-weight:600;line-height:1.4;z-index:0}
+  .img-slot .ph .ico{display:block;font-size:1.6rem;margin-bottom:6px}
+  /* Sobre fundo escuro (hero) */
+  .img-slot.on-dark{border-color:rgba(255,255,255,.28);color:#aebfdd;
+    background:repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0 12px,rgba(255,255,255,.08) 12px 24px)}
+
+  /* ====== MARCA-TEXTO / ESTILO RESUMO DE ESTUDANTE ====== */
+  /* Traço de marcador irregular, como passado à mão por cima do texto */
+  .hl-y,.hl-g,.hl-p,.hl-b{
+    background-repeat:no-repeat;
+    background-position:0 60%;
+    background-size:100% 62%;
+    padding:.02em .15em;
+    border-radius:2px;
+    -webkit-box-decoration-break:clone;
+    box-decoration-break:clone;
+    color:var(--tinta);
+    font-weight:700;
+  }
+  .hl-y{background-image:linear-gradient(104deg,transparent .5%,#ffe066 1%,#ffd43b 95%,transparent 99%)}
+  .hl-g{background-image:linear-gradient(104deg,transparent .5%,#b2f2bb 1%,#8ce99a 95%,transparent 99%)}
+  .hl-p{background-image:linear-gradient(104deg,transparent .5%,#fcc2d7 1%,#faa8c8 95%,transparent 99%)}
+  .hl-b{background-image:linear-gradient(104deg,transparent .5%,#a5d8ff 1%,#74c0fc 95%,transparent 99%)}
+  /* Versões claras para usar sobre fundo escuro (hero/preço) */
+  .hl-y.on-dark,.hl-g.on-dark,.hl-b.on-dark{color:#10182a}
+
+  /* Texto "circulado" à caneta, para dar ênfase manuscrita */
+  .circle-ink{position:relative;display:inline-block;font-weight:800}
+  .circle-ink::after{
+    content:"";position:absolute;inset:-18% -10% -22%;
+    border:2.5px solid var(--dourado);border-radius:50%;
+    transform:rotate(-3deg) scale(1.04);
+    border-right-color:transparent;border-top-color:transparent;
+    opacity:.9;pointer-events:none;
+  }
+
+  /* Sublinhado "rabiscado" à mão (SVG embutido) */
+  .ink-underline{
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'><path d='M2 7 C 25 2, 50 11, 75 5 S 110 3, 118 8' stroke='%23f5b301' stroke-width='3' fill='none' stroke-linecap='round'/></svg>");
+    background-repeat:no-repeat;background-position:0 100%;background-size:100% .55em;
+    padding-bottom:.18em;
+  }
+  .ink-underline.blue{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'><path d='M2 7 C 25 2, 50 11, 75 5 S 110 3, 118 8' stroke='%231652b8' stroke-width='3' fill='none' stroke-linecap='round'/></svg>")}
+
+  /* "Tag" de caderno: como uma anotação na margem */
+  .note-tag{
+    display:inline-block;font-weight:800;font-size:.72rem;letter-spacing:.5px;text-transform:uppercase;
+    background:#fff7d6;color:#8a6d00;border:1px dashed #e6c34d;
+    padding:4px 12px;border-radius:6px;transform:rotate(-1.5deg);
+  }
+
+  /* ---------- Barra de aviso ---------- */
+  .topbar{
+    background:linear-gradient(90deg,var(--azul),var(--azul-claro));
+    color:#fff;text-align:center;font-weight:600;font-size:.9rem;
+    padding:11px 16px;letter-spacing:.2px;
+  }
+  .topbar span{color:var(--dourado)}
+
+  /* ---------- Botão CTA (único botão da página) ---------- */
+  .cta{
+    display:inline-flex;align-items:center;justify-content:center;gap:10px;
+    background:linear-gradient(180deg,#1bcb56,var(--verde));
+    color:#fff;font-weight:800;font-size:1.18rem;text-decoration:none;
+    padding:20px 42px;border-radius:60px;border:none;cursor:pointer;
+    box-shadow:0 12px 26px rgba(22,163,74,.38);
+    transition:transform .15s ease,box-shadow .15s ease,filter .15s ease;
+    text-align:center;line-height:1.2;
+    animation:pulse 2.6s ease-in-out infinite;
+  }
+  .cta:hover{transform:translateY(-3px);box-shadow:0 18px 34px rgba(22,163,74,.5);filter:brightness(1.04)}
+  .cta:active{transform:translateY(0)}
+  .cta .arrow{font-size:1.25em;transition:transform .15s ease}
+  .cta:hover .arrow{transform:translateX(4px)}
+  .cta .small{display:block;font-weight:600;font-size:.72rem;opacity:.9;letter-spacing:.5px}
+  @keyframes pulse{
+    0%,100%{box-shadow:0 12px 26px rgba(22,163,74,.38)}
+    50%{box-shadow:0 12px 26px rgba(22,163,74,.38),0 0 0 14px rgba(22,163,74,0)}
+  }
+  .cta-center{text-align:center;margin-top:30px}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    background:
+      radial-gradient(1200px 600px at 80% -10%,rgba(245,179,1,.16),transparent 60%),
+      radial-gradient(900px 500px at -10% 20%,rgba(37,99,235,.18),transparent 55%),
+      linear-gradient(160deg,#071c3d,#0b2a5b 55%,#103a78);
+    color:#fff;position:relative;padding:54px 0 76px;
+  }
+  .hero .wrap{position:relative;z-index:2}
+
+  /* Ícones flutuantes decorativos */
+  .floaties{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden}
+  .floaty{
+    position:absolute;display:grid;place-items:center;
+    width:74px;height:74px;border-radius:20px;font-size:2rem;
+    background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);
+    box-shadow:0 14px 40px rgba(0,0,0,.22);backdrop-filter:blur(6px);
+    animation:floatY 6s ease-in-out infinite;
+  }
+  .floaty.f1{top:16%;right:8%;animation-delay:0s}
+  .floaty.f2{bottom:20%;right:20%;width:62px;height:62px;font-size:1.6rem;animation-delay:1.2s}
+  .floaty.f3{top:46%;right:42%;width:54px;height:54px;font-size:1.4rem;animation-delay:2.4s;background:rgba(245,179,1,.16);border-color:rgba(245,179,1,.35)}
+  @keyframes floatY{
+    0%,100%{transform:translateY(0) rotate(-3deg)}
+    50%{transform:translateY(-16px) rotate(3deg)}
+  }
+  .logo-wrap{margin-bottom:26px}
+  .logo-img{height:140px;width:auto;max-width:100%;display:block;
+    filter:drop-shadow(0 8px 24px rgba(0,0,0,.35))}
+  .badge-logo{
+    display:inline-flex;align-items:center;gap:12px;
+    background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);
+    padding:8px 16px 8px 8px;border-radius:50px;backdrop-filter:blur(6px);
+  }
+  .badge-logo .shield{
+    width:38px;height:38px;border-radius:10px;flex:none;
+    background:linear-gradient(160deg,var(--azul-vivo),var(--azul));
+    display:grid;place-items:center;font-size:1.2rem;box-shadow:inset 0 0 0 2px var(--dourado);
+  }
+  .badge-logo b{font-size:.82rem;letter-spacing:1.5px;color:#fff;text-transform:uppercase}
+  .badge-logo b span{color:var(--dourado)}
+
+  .hero .pretitle{
+    color:var(--dourado);font-weight:700;font-size:.96rem;text-transform:uppercase;
+    letter-spacing:1.2px;margin-bottom:18px;
+  }
+  .hero h1{font-size:clamp(1.6rem,4vw,2.6rem);font-weight:800;color:#fff;max-width:780px}
+  .hero h1 .hl{
+    color:var(--dourado);position:relative;white-space:nowrap;
+  }
+  .hero h1 .mins{
+    background:linear-gradient(120deg,var(--dourado),#ffd95e);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero .sub{
+    color:#cdd9ef;font-size:clamp(1.02rem,2.2vw,1.22rem);margin-top:22px;max-width:680px;
+  }
+  .hero-grid{
+    display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;
+  }
+  /* visual do hero (notebook real) */
+  .hero-visual{position:relative;z-index:2;display:flex;justify-content:center}
+  .hero-visual img{
+    width:100%;max-width:560px;height:auto;
+    filter:drop-shadow(0 24px 50px rgba(0,0,0,.45));
+    animation:floatY 7s ease-in-out infinite;
+  }
+
+  /* moldura do laptop / vídeo (legado) */
+  .device{
+    position:relative;border-radius:16px;overflow:hidden;
+    box-shadow:var(--sombra-forte);border:1px solid rgba(255,255,255,.14);
+    background:linear-gradient(160deg,#12325f,#0a213f);
+  }
+  .device .topdots{
+    display:flex;align-items:center;gap:6px;padding:10px 14px;background:rgba(0,0,0,.25);
+  }
+  .device .topdots i{width:10px;height:10px;border-radius:50%;display:block}
+  .device .topdots i:nth-child(1){background:#ff5f57}
+  .device .topdots i:nth-child(2){background:#febc2e}
+  .device .topdots i:nth-child(3){background:#28c840}
+  .device .topdots small{margin-left:auto;color:#9fb3d6;font-size:.74rem;letter-spacing:.5px}
+  .device .screen{
+    aspect-ratio:16/10;
+    background:
+      radial-gradient(600px 300px at 50% 30%,rgba(37,99,235,.35),transparent 60%),
+      linear-gradient(160deg,#0d2b56,#091c38);
+    display:grid;place-items:center;position:relative;color:#dfe8fb;text-align:center;
+  }
+  .device .screen-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .device .live,.device .play,.device .cap{position:relative;z-index:2}
+  .device .live{position:absolute;z-index:2}
+  .device .play{
+    width:74px;height:74px;border-radius:50%;background:rgba(255,255,255,.95);
+    display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);
+    transition:transform .15s ease;
+  }
+  .device .play::after{
+    content:"";border-style:solid;border-width:14px 0 14px 24px;
+    border-color:transparent transparent transparent var(--azul);margin-left:5px;
+  }
+  .device:hover .play{transform:scale(1.06)}
+  .device .live{
+    position:absolute;top:14px;left:14px;background:#ef4444;color:#fff;
+    font-size:.66rem;font-weight:800;letter-spacing:1px;padding:5px 10px;border-radius:6px;
+    display:flex;align-items:center;gap:6px;
+  }
+  .device .live::before{content:"";width:7px;height:7px;border-radius:50%;background:#fff;animation:blink 1.2s infinite}
+  @keyframes blink{50%{opacity:.25}}
+  .device .cap{position:absolute;bottom:16px;font-size:.82rem;color:#bcccea}
+
+  /* ---------- Faixa de provas/dores ---------- */
+  .audience{background:var(--cinza-claro)}
+  .section-head{text-align:center;max-width:740px;margin:0 auto 44px}
+  .eyebrow{
+    color:var(--azul-claro);font-weight:800;letter-spacing:1.4px;text-transform:uppercase;
+    font-size:.82rem;margin-bottom:12px;
+  }
+  .section-head h2{font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--tinta)}
+  .section-head p{margin-top:14px;font-size:1.05rem}
+
+  .pains{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .pain{
+    background:#fff;border:1px solid var(--borda);border-radius:14px;padding:22px 22px 22px 60px;
+    position:relative;box-shadow:0 4px 14px rgba(11,42,91,.05);transition:transform .15s ease,box-shadow .15s ease;
+  }
+  .pain:hover{transform:translateY(-3px);box-shadow:var(--sombra)}
+  .pain::before{
+    content:"";position:absolute;left:20px;top:24px;width:26px;height:26px;border-radius:50%;
+    background:rgba(239,68,68,.12);
+  }
+  .pain::after{
+    content:"✓";position:absolute;left:27px;top:24px;color:var(--verde);font-weight:900;font-size:1rem;
+  }
+  .pain p{color:var(--cinza);font-size:.98rem;margin:0}
+  .pain.full{grid-column:1/-1}
+
+  /* ---------- O que você recebe ---------- */
+  .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:18px}
+  .card{
+    border:1px solid var(--borda);border-radius:var(--raio);padding:30px 26px;background:#fff;
+    position:relative;box-shadow:var(--sombra);display:flex;flex-direction:column;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:var(--sombra-forte)}
+  .card.feature{border-color:var(--dourado);box-shadow:0 14px 40px rgba(245,179,1,.18)}
+  .card .tag{
+    position:absolute;top:-13px;left:26px;background:var(--dourado);color:#3a2c00;
+    font-weight:800;font-size:.72rem;letter-spacing:1px;padding:5px 12px;border-radius:30px;text-transform:uppercase;
+  }
+  .card .card-mockup{
+    aspect-ratio:16/10;width:100%;margin-bottom:18px;border-radius:12px;overflow:hidden;
+    background:#fff;border:1px solid var(--borda);
+    display:grid;place-items:center;
+  }
+  .card .card-mockup img{
+    max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;display:block;
+  }
+  .card .ico{
+    width:48px;height:48px;border-radius:12px;display:grid;place-items:center;font-size:1.4rem;
+    background:linear-gradient(160deg,#eaf1ff,#dbe7ff);margin-bottom:14px;
+    position:absolute;top:18px;right:18px;
+  }
+  .card.feature .ico{top:18px}
+  .card.feature .ico{background:linear-gradient(160deg,#fff3d1,#ffe49b)}
+  .card h3{font-size:1.18rem;margin-bottom:10px;color:var(--tinta)}
+  .card p{font-size:.95rem;flex:1}
+  .card .price{
+    margin-top:18px;font-weight:800;color:var(--azul-claro);font-size:1.05rem;
+    border-top:1px dashed var(--borda);padding-top:14px;
+  }
+  .card .price s{color:#aab3c4;font-weight:600}
+
+  /* ---------- Preço / Oferta ---------- */
+  .pricing{
+    background:
+      radial-gradient(900px 500px at 50% -20%,rgba(37,99,235,.18),transparent 60%),
+      linear-gradient(160deg,#081f43,#0b2a5b);
+    color:#fff;text-align:center;
+  }
+  .pricing .eyebrow{color:var(--dourado)}
+  .pricing h2{color:#fff;font-size:clamp(1.6rem,3.6vw,2.3rem)}
+  .price-box{
+    max-width:560px;margin:34px auto 0;background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.16);border-radius:24px;padding:40px 30px;backdrop-filter:blur(6px);
+  }
+  .price-box .deveria{color:#aebfdd;font-size:1rem}
+  .price-box .deveria s{color:#7e91b8}
+  .price-box .lead{color:#cdd9ef;margin:14px 0 6px;font-size:.98rem}
+  .price-box .parcela{
+    font-size:clamp(2.4rem,7vw,3.6rem);font-weight:900;color:#fff;line-height:1.05;letter-spacing:-1px;
+  }
+  .price-box .parcela small{font-size:.42em;font-weight:700;color:var(--dourado);vertical-align:middle}
+  .price-box .avista{color:var(--dourado);font-weight:800;font-size:1.15rem;margin-top:6px}
+  .price-box .economia{
+    display:inline-block;margin-top:18px;background:rgba(22,163,74,.18);color:#7df0a3;
+    border:1px solid rgba(22,163,74,.4);font-weight:700;font-size:.86rem;padding:7px 16px;border-radius:30px;
+  }
+  .price-box .cta{margin-top:26px;width:100%;max-width:420px}
+
+  /* ---------- Sobre a Larissa ---------- */
+  .about-grid{display:grid;grid-template-columns:300px 1fr;gap:46px;align-items:center}
+  .about-photo{
+    border-radius:20px;aspect-ratio:4/5;overflow:hidden;box-shadow:var(--sombra-forte);
+    background:linear-gradient(160deg,#dbe7ff,#bcd0ff);display:grid;place-items:center;position:relative;
+  }
+  .about-photo .about-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1}
+  .about-photo .ph{font-size:5rem;opacity:.55}
+  .about-photo .nm{z-index:2}
+  .about-photo .nm{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(8,31,67,.92));
+    color:#fff;padding:26px 20px 18px;text-align:center}
+  .about-photo .nm b{display:block;font-size:1.2rem}
+  .about-photo .nm small{color:#cdd9ef;font-size:.82rem;letter-spacing:.5px}
+  .about-text .eyebrow{color:var(--azul-claro)}
+  .about-text h2{font-size:clamp(1.6rem,3.4vw,2.2rem);margin-bottom:18px;color:var(--tinta)}
+  .about-text p{margin-bottom:16px;font-size:1.04rem}
+  .about-text p .mark{background:linear-gradient(transparent 60%,#ffe9a8 60%);color:var(--tinta);font-weight:600}
+
+  /* ---------- Recapitulação / 2ª oferta ---------- */
+  .recap{background:var(--cinza-claro)}
+  .recap-list{max-width:620px;margin:30px auto 0;display:grid;gap:12px}
+  .recap-item{
+    display:flex;align-items:center;gap:14px;background:#fff;border:1px solid var(--borda);
+    border-radius:14px;padding:16px 20px;box-shadow:0 4px 14px rgba(11,42,91,.05);
+  }
+  .recap-item .check{
+    width:28px;height:28px;border-radius:50%;background:var(--verde);color:#fff;flex:none;
+    display:grid;place-items:center;font-weight:900;font-size:.9rem;
+  }
+  .recap-item b{color:var(--tinta)}
+  .recap-item .v{margin-left:auto;color:#aab3c4;font-weight:600}
+  .recap-item .v s{color:#c2cad8}
+
+  /* ---------- Selos de garantia ---------- */
+  .trust{display:flex;justify-content:center;gap:34px;flex-wrap:wrap;margin-top:40px}
+  .trust .item{display:flex;align-items:center;gap:12px;color:#fff;font-size:.92rem}
+  .trust .item .ic{
+    width:42px;height:42px;border-radius:12px;
+    background:rgba(245,179,1,.15);border:1px solid rgba(245,179,1,.45);
+    display:grid;place-items:center;font-size:1.3rem;flex:none;
+  }
+  .trust .item b{display:block;color:var(--dourado);font-size:.95rem}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:760px;margin:30px auto 0;display:grid;gap:14px}
+  details{
+    background:#fff;border:1px solid var(--borda);border-radius:14px;padding:0 22px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(11,42,91,.05);
+  }
+  details summary{
+    list-style:none;cursor:pointer;padding:20px 36px 20px 0;font-weight:700;color:var(--tinta);
+    position:relative;font-size:1.02rem;
+  }
+  details summary::-webkit-details-marker{display:none}
+  details summary::after{
+    content:"+";position:absolute;right:2px;top:50%;transform:translateY(-50%);
+    font-size:1.5rem;color:var(--azul-claro);transition:transform .2s ease;font-weight:400;
+  }
+  details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+  details .ans{padding:0 0 22px;color:var(--cinza);font-size:.98rem}
+
+  /* ---------- Rodapé ---------- */
+  footer{background:#071c3d;color:#9fb3d6;text-align:center;padding:44px 0;font-size:.86rem}
+  footer .brand{color:#fff;font-weight:800;letter-spacing:1px;margin-bottom:8px}
+  footer .brand span{color:var(--dourado)}
+  footer a{color:#cdd9ef}
+  footer .legal{margin-top:14px;font-size:.78rem;color:#6f84ab;max-width:640px;margin-left:auto;margin-right:auto}
+
+  /* ---------- Responsivo ---------- */
+  @media (max-width:980px){
+    .offer-grid{grid-template-columns:1fr 1fr}
+    .card.feature{grid-column:1/-1}
+  }
+  @media (max-width:900px){
+    .wrap{padding:0 18px}
+    .hero-grid{grid-template-columns:1fr;gap:34px}
+    .offer-grid{grid-template-columns:1fr}
+    .card.feature{grid-column:auto}
+    .about-grid{grid-template-columns:1fr;gap:28px;text-align:center}
+    .about-photo{max-width:280px;margin:0 auto}
+    .about-text .eyebrow{justify-content:center}
+    .device .cap{font-size:.74rem}
+  }
+  @media (max-width:680px){
+    section{padding:46px 0}
+    .wrap{padding:0 16px}
+    .topbar{font-size:.78rem;padding:9px 14px;line-height:1.35}
+    .logo-wrap{margin-bottom:20px}
+    .badge-logo b{font-size:.72rem;letter-spacing:1px}
+    .hero{padding:40px 0 60px}
+    .hero .pretitle{font-size:.85rem}
+    .hero .sub{margin-top:18px}
+    /* ----- Imagens responsivas (tamanho bom e centralizado no mobile) ----- */
+    .hero-visual{margin-top:10px}
+    .hero-visual img{max-width:88%;margin:0 auto}        /* notebook da 1ª dobra */
+    .about-photo{max-width:78%;width:100%}               /* foto da Larissa maior */
+    .card .card-mockup{margin-bottom:16px}               /* mockups dos entregáveis */
+    .logo-img{height:96px}
+    /* Mantém só 1 ícone flutuante no mobile pra não poluir */
+    .floaty.f2,.floaty.f3{display:none}
+    .floaty.f1{top:auto;bottom:6%;right:6%;width:56px;height:56px;font-size:1.5rem;opacity:.85}
+    .section-head{margin-bottom:34px}
+    .section-head p{font-size:.98rem}
+    .pains{grid-template-columns:1fr}
+    .pain.full{grid-column:auto}
+    .pain{padding:18px 18px 18px 52px}
+    .pain::before{left:16px;top:20px}
+    .pain::after{left:23px;top:20px}
+    .trust{gap:18px 22px}
+    .price-box{padding:30px 20px;border-radius:20px}
+    .recap-item{padding:14px 16px}
+    .recap-item .v{font-size:.85rem}
+    details summary{font-size:.96rem;padding:18px 32px 18px 0}
+    .cta-center .cta,.price-box .cta{width:100%}
+    /* Marca-texto um pouco mais sutil em telas pequenas (não “estoura” a linha) */
+    .hl-y,.hl-g,.hl-p,.hl-b{padding:0 .08em}
+  }
+  @media (max-width:420px){
+    .price-box .parcela{font-size:2.1rem}
+    .recap-item{flex-wrap:wrap}
+    .recap-item .v{margin-left:38px}
+    .cta{font-size:1.05rem;padding:18px 26px}
+    .circle-ink::after{inset:-12% -6% -16%}
+  }
+  /* Respeita usuários que preferem menos movimento */
+  @media (prefers-reduced-motion:reduce){
+    .cta{animation:none}
+    .floaty{animation:none}
+    *{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ====== AVISO TOPO ====== -->
+<div class="topbar">
+  Esqueça Resumos, Anki, Apostilas Enormes e as <span>Aulas Infinitas do Cursinho…</span>
+</div>
+
+<!-- ====== HERO ====== -->
+<header class="hero">
+  <!-- Ícones flutuantes decorativos (medicina + memorização) -->
+  <div class="floaties" aria-hidden="true">
+    <span class="floaty f1">🧠</span>
+    <span class="floaty f2">🩺</span>
+    <span class="floaty f3">💡</span>
+  </div>
+
+  <div class="wrap">
+    <!-- LOGO: salve seu arquivo como assets/logo.png (a logo já contém o texto) -->
+    <div class="logo-wrap">
+      <img class="logo-img" src="assets/logo.png" alt="MasterClass Memorizando Preventiva para Residência"
+           onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='inline-flex'" />
+      <span id="logo-fallback" class="badge-logo" style="display:none">
+        <span class="shield">🧠</span>
+        <b>MasterClass <span>Memorizando Preventiva</span></b>
+      </span>
+    </div>
+
+    <div class="hero-grid">
+      <div>
+        <p class="pretitle">Nesta MasterClass exclusiva você vai aprender:</p>
+        <h1>
+          Como <span class="hl-y">gravar</span> os temas que mais caem de
+          Preventiva na Residência Médica em apenas
+          <span class="circle-ink mins">15 minutos</span>, usando a técnica do Palácio da Memória!
+        </h1>
+        <p class="sub">
+          Funciona para <strong style="color:#fff">qualquer Residência</strong> — e mesmo que você
+          se considere <strong style="color:#fff">ruim de memória</strong>.
+        </p>
+      </div>
+
+      <div class="hero-visual">
+        <img src="assets/hero.png" alt="MasterClass Memorizando Preventiva — aula com a Larissa" />
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ====== PARA QUEM É (DORES) ====== -->
+<section class="audience">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Essa MasterClass é para você</p>
+      <h2>Você se identifica com <span class="hl-p">alguma dessas situações?</span></h2>
+      <p>Se respondeu “sim” para pelo menos uma, esta aula foi feita para você.</p>
+    </div>
+
+    <div class="pains">
+      <div class="pain">
+        <p>Está no <strong>5º, 6º ano</strong> ou já se formou em Medicina e quer <span class="hl-b">passar na Residência Médica</span>.</p>
+      </div>
+      <div class="pain">
+        <p>Passa horas mergulhado em Preventiva, fecha o livro achando que aprendeu — e na semana seguinte <span class="hl-p">não lembra nem a diferença entre coorte e caso-controle</span>.</p>
+      </div>
+      <div class="pain">
+        <p>Tem pavor de Preventiva porque acha tudo decoreba: <span class="hl-y">leis do SUS, tipos de estudo epidemiológico, indicadores de saúde</span>… entra por um ouvido e sai pelo outro.</p>
+      </div>
+      <div class="pain">
+        <p>Já tentou de tudo — resumo, Anki, flashcard, reler a apostila cinco vezes — e mesmo assim continua <span class="hl-p">dando branco na hora da prova</span>.</p>
+      </div>
+      <div class="pain full">
+        <p>Está cansado de <span class="hl-y">estudar mais e lembrar menos</span>, e quer um método que faça o conteúdo <span class="hl-g">grudar de primeira</span>, mesmo se achando “ruim de memória”.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== O QUE VOCÊ RECEBE ====== -->
+<section id="conteudo">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="note-tag">★ anota aí</span>
+      <p class="eyebrow" style="margin-top:14px">Veja o que você vai receber</p>
+      <h2>Tudo o que está <span class="hl-g">incluso na MasterClass</span></h2>
+      <p>Mais do que uma aula: um sistema completo para <span class="hl-y">fixar Preventiva sem decoreba</span>.</p>
+    </div>
+
+    <div class="offer-grid">
+      <div class="card feature">
+        <span class="tag">Principal</span>
+        <div class="card-mockup">
+          <img src="assets/hero.png" alt="Mockup da MasterClass" />
+        </div>
+        <div class="ico">🎓</div>
+        <h3>MasterClass Exclusiva — Como Memorizar</h3>
+        <p>Descubra como memorizar qualquer tema de Preventiva sem decoreba, usando a estratégia mais poderosa dos últimos 2.000 anos: a <span class="hl-y">técnica do Palácio da Memória</span>.</p>
+        <div class="price"><s>De R$197</s></div>
+      </div>
+
+      <div class="card">
+        <div class="card-mockup">
+          <img src="assets/mockup-pdf.png" alt="Mockup do PDF Premium" />
+        </div>
+        <div class="ico">📘</div>
+        <h3>PDF Premium de Apoio</h3>
+        <p>PDF de apoio premium para te ajudar a entender todo o conteúdo da aula.</p>
+        <div class="price"><s>De R$97</s></div>
+      </div>
+
+      <div class="card">
+        <div class="card-mockup">
+          <img src="assets/mockup-tiraduvidas.png" alt="Mockup do Canal de Tira-Dúvidas" />
+        </div>
+        <div class="ico">💬</div>
+        <h3>Área Exclusiva de Tira-Dúvidas</h3>
+        <p>Um canal exclusivo para você não travar na hora de aplicar. Ficou com dúvida em algum palácio ou quer validar uma associação? É só perguntar e receber resposta da equipe da <span class="hl-g">MemoriMed</span> — você aplica a técnica com segurança, sem ficar sozinho no processo.</p>
+        <div class="price"><s>De R$97</s></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ====== OFERTA / PREÇO ====== -->
+<section class="pricing" id="oferta">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Oferta especial</p>
+      <h2>Garanta a MasterClass com <span class="hl-y on-dark">todos os presentes</span></h2>
+    </div>
+
+    <div class="price-box">
+      <p class="deveria">Tudo isso deveria custar: <s>R$391,00</s></p>
+      <p class="lead">Mas hoje você garante por apenas:</p>
+      <div class="parcela"><span class="circle-ink">12<small>x de</small> R$8,70</span></div>
+      <p class="avista">ou R$67,00 à vista</p>
+      <span class="economia">Economize mais de R$320 hoje</span>
+
+      <a href="#" class="cta" id="checkout-1" rel="nofollow noopener">
+        QUERO PARTICIPAR DA AULA <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="trust">
+      <div class="item"><span class="ic">🛡️</span><span><b>Compra Segura</b>Ambiente protegido</span></div>
+      <div class="item"><span class="ic">⭐</span><span><b>Satisfação Garantida</b>Conteúdo aplicável</span></div>
+      <div class="item"><span class="ic">🔐</span><span><b>Privacidade Protegida</b>Seus dados em sigilo</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== SOBRE A LARISSA ====== -->
+<section id="sobre">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo">
+        <img class="about-img" src="assets/larissa.jpg" alt="Larissa - Médica e fundadora da MemoriMed" onerror="this.style.display='none'" />
+        <span class="ph">👩‍⚕️</span>
+        <div class="nm"><b>Larissa</b><small>Médica · Fundadora da MemoriMed</small></div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow">Quem criou a MasterClass</p>
+        <h2>Da dor de esquecer tudo à <span class="hl-g">técnica dos campeões de memória</span></h2>
+        <p>A <span class="hl-b">Larissa é Médica e fundadora da MemoriMed</span>. Durante a faculdade, ela viveu na pele o problema de estudar horas e esquecer tudo na hora da prova.</p>
+        <p>Foi quando dominou a <span class="hl-y">técnica do Palácio da Memória</span> — a mesma usada por campeões mundiais de memória — e transformou a forma como gravava o conteúdo mais temido da prova.</p>
+        <p>Ela criou esta MasterClass com um objetivo claro: mostrar na prática como usar essa técnica para decorar qualquer assunto sem decoreba, <span class="hl-p">para que nenhum candidato perca uma vaga por algo tão evitável quanto o esquecimento</span>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RECAP + 2ª OFERTA ====== -->
+<section class="recap">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Resumo do que você leva</p>
+      <h2>Tudo isso por um <span class="hl-y">único investimento</span></h2>
+    </div>
+
+    <div class="recap-list">
+      <div class="recap-item">
+        <span class="check">✓</span>
+        <b>MasterClass Exclusiva — Como Memorizar</b>
+        <span class="v"><s>R$197</s></span>
+      </div>
+      <div class="recap-item">
+        <span class="check">✓</span>
+        <b>PDF Premium de Apoio</b>
+        <span class="v"><s>R$97</s></span>
+      </div>
+      <div class="recap-item">
+        <span class="check">✓</span>
+        <b>Área Exclusiva de Tira-Dúvidas</b>
+        <span class="v"><s>R$97</s></span>
+      </div>
+    </div>
+
+    <div class="cta-center" style="margin-top:34px">
+      <div style="font-weight:900;font-size:1.8rem;color:var(--tinta);margin-bottom:4px">
+        12x de R$8,70 <span style="color:var(--cinza);font-weight:600;font-size:1rem">ou R$67,00 à vista</span>
+      </div>
+      <div style="color:var(--cinza);margin-bottom:22px"><s>De R$391,00</s></div>
+      <a href="#" class="cta" id="checkout-2" rel="nofollow noopener">QUERO PARTICIPAR DA AULA <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== FAQ ====== -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Perguntas frequentes</p>
+      <h2>Ainda tem <span class="hl-p">dúvidas?</span></h2>
+    </div>
+
+    <div class="faq">
+      <details open>
+        <summary>Funciona mesmo se eu me considero ruim de memória?</summary>
+        <div class="ans">Sim. A técnica do Palácio da Memória não depende de “talento” — é um método estruturado usado por campeões mundiais de memória. A aula foi pensada justamente para quem acha que tem memória ruim.</div>
+      </details>
+      <details>
+        <summary>Serve para qualquer prova de Residência?</summary>
+        <div class="ans">Sim. O método funciona para qualquer Residência. O foco é Preventiva, mas a técnica pode ser aplicada a qualquer assunto que você precise memorizar.</div>
+      </details>
+      <details>
+        <summary>O que exatamente está incluso?</summary>
+        <div class="ans">A MasterClass exclusiva (Como Memorizar), o PDF Premium de Apoio com os palácios em imagens e associações prontas, e a Área Exclusiva de Tira-Dúvidas com a equipe da MemoriMed.</div>
+      </details>
+      <details>
+        <summary>Como funciona o pagamento?</summary>
+        <div class="ans">Você garante tudo por 12x de R$8,70 ou R$67,00 à vista, em ambiente de compra 100% seguro e com seus dados protegidos.</div>
+      </details>
+    </div>
+
+    <div class="cta-center">
+      <a href="#oferta" class="cta">QUERO PARTICIPAR DA AULA <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ====== RODAPÉ ====== -->
+<footer>
+  <div class="wrap">
+    <div class="brand">MEMORI<span>MED</span></div>
+    <p>MasterClass Memorizando Preventiva para Residência</p>
+    <p class="legal">
+      Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma
+      estratégia não deve ser interpretada como garantia de resultados. Os resultados podem variar
+      de pessoa para pessoa, dependendo da dedicação aplicada.
+    </p>
+    <p style="margin-top:14px">© <span id="year"></span> MemoriMed. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Ano dinâmico no rodapé
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  /*
+    LINK DE CHECKOUT
+    ----------------
+    Troque o valor abaixo pelo seu link de pagamento (Hotmart, Kiwify, Eduzz, etc.).
+    Todos os botões de compra serão atualizados automaticamente.
+  */
+  const CHECKOUT_URL = "#"; // ex.: "https://pay.kiwify.com.br/seu-produto"
+  if (CHECKOUT_URL && CHECKOUT_URL !== "#") {
+    document.querySelectorAll('#checkout-1, #checkout-2').forEach(a => a.href = CHECKOUT_URL);
+  }
+</script>
+
+</body>
+</html>
