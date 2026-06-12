@@ -1,0 +1,26 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\\\\n\" http://localhost:8000/index.html)",
+      "Bash(pkill -f \"http.server 8000\")",
+      "Bash(curl -s -o /dev/null -w \"local:%{http_code}\\\\n\" http://localhost:8000/index.html)",
+      "Bash(git pull *)",
+      "Bash(python3 -)",
+      "Bash(python3 -c \"import scipy; print\\('scipy', scipy.__version__\\)\")",
+      "Bash(pip install *)",
+      "Bash(python3 -c \"import scipy; print\\('ok'\\)\")",
+      "Bash(python3 -c \"from PIL import Image; im=Image.open\\('assets/mockup-pdf-novo.png'\\); print\\(im.size, im.mode\\)\")",
+      "Bash(curl -s -o /dev/null -w \"pdf-mockup:%{http_code} size:%{size_download}\\\\n\" \"http://localhost:8000/assets/mockup-pdf.png\")",
+      "Bash(curl -s -o /dev/null -w \"page:%{http_code} logo:%{size_download}\\\\n\" \"http://localhost:8000/assets/logo.png\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(npx -y vercel whoami)",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(npx -y vercel login)",
+      "Bash(npx -y vercel deploy --prod --yes)",
+      "Bash(curl -s -o /dev/null -w \"site:%{http_code}\\\\n\" https://masterclass-preventiva.vercel.app)",
+      "Bash(curl -s -o /dev/null -w \"logo:%{http_code}\\\\n\" https://masterclass-preventiva.vercel.app/assets/logo.png)"
+    ]
+  }
+}
